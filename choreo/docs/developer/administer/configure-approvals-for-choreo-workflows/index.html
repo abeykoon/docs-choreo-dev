@@ -3590,6 +3590,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#permissions-to-create-approval-requests" class="md-nav__link">
+    Permissions to create approval requests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permissions-to-review-and-respond-to-approval-requests" class="md-nav__link">
     Permissions to review and respond to approval requests
   </a>
@@ -3886,6 +3893,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#permissions-to-create-approval-requests" class="md-nav__link">
+    Permissions to create approval requests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permissions-to-review-and-respond-to-approval-requests" class="md-nav__link">
     Permissions to review and respond to approval requests
   </a>
@@ -3933,16 +3947,24 @@ document.addEventListener('DOMContentLoaded', function() {
 <h1 id="configure-approvals-for-choreo-workflows">Configure Approvals for Choreo Workflows<a class="headerlink" href="#configure-approvals-for-choreo-workflows" title="Permanent link">&para;</a></h1>
 <p>Choreo allows you to configure approval processes for specific workflows within the platform. An approval process for a workflow ensures that critical or sensitive changes are properly managed and controlled.</p>
 <p>Choreo currently allows you to configure approvals for environment promotion and API subscription workflows.</p>
-<p>Configuring approvals for environment promotion allows authorized users to control components being promoted to a critical/production environment. </p>
+<p>Configuring approvals for environment promotion allows authorized users to control components being promoted to a critical/production environment.</p>
 <p>Configuring approvals for the API subscription workflow allows you to create subscription plans that require approval before being activated. This feature allows you to control access to APIs by requiring administrative review and authorization of subscriptions before they become active.</p>
+<h2 id="permissions-to-create-approval-requests">Permissions to create approval requests<a class="headerlink" href="#permissions-to-create-approval-requests" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Environment promotion</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>To submit an environment promotion approval request, a user must have required permissions to promote components or at least <code>WORKFLOW-MANAGEMENT &gt;&gt; Create approval requests</code> permission</p>
+</div>
+</div>
+</div>
 <h2 id="permissions-to-review-and-respond-to-approval-requests">Permissions to review and respond to approval requests<a class="headerlink" href="#permissions-to-review-and-respond-to-approval-requests" title="Permanent link">&para;</a></h2>
 <p>Click the respective tab for details on permissions depending on the workflow for which you want to configure approvals:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Environment promotion</label><label for="__tabbed_1_2">API subscription</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Environment promotion</label><label for="__tabbed_2_2">API subscription</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>To review and respond to environment promotion approval requests, a user must have the following permissions. Administrators must ensure that users designated to review and respond to approval requests have these permissions:</p>
 <ul>
-<li><strong>WORKFLOW-MANAGEMENT</strong>: <ul>
+<li><strong>WORKFLOW-MANAGEMENT</strong>:<ul>
 <li>Approve component promotion requests: Grants access to review and approve the promotion of components to critical environments.</li>
 </ul>
 </li>
@@ -3956,7 +3978,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Approve API subscriptions: Grants access to review and approve API subscription workflow requests.</li>
 </ul>
 </li>
-<li><strong>PROJECT-MANAGEMENT</strong>: 
+<li><strong>PROJECT-MANAGEMENT</strong>:
       Grants access to view and approve workflow requests. This is the same permission used to update or delete projects.</li>
 </ul>
 </div>
@@ -3992,8 +4014,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Click <strong>Save</strong>. This configures and enables the approval process for the workflow.</p>
 </li>
 </ol>
-<p>Once you enable the approval process for a workflow, see the following details on how to submit a request for approval and the approval process. Click the respective tab depending on the workflow for which you enabled the approval process:  </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Environment promotion</label><label for="__tabbed_2_2">API subscription</label></div>
+<p>Once you enable the approval process for a workflow, see the following details on how to submit a request for approval and the approval process. Click the respective tab depending on the workflow for which you enabled the approval process:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Environment promotion</label><label for="__tabbed_3_2">API subscription</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Once you configure an approval process for environment promotion, developers must <a href="../../develop-components/submit-and-manage-workflow-approval-requests/">submit a request for approval to use the workflow</a>. An authorized assignee must then <a href="../review-workflow-approval-requests/">review and approve the request</a> for a developer to proceed with the task related to the workflow.</p>
